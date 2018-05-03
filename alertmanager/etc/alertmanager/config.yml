@@ -1,0 +1,12 @@
+route:
+  group_by: ['alertname']
+  receiver: 'wechat'
+
+receivers:
+- name: 'wechat'
+  wechat_configs:
+  - corp_id: 'wwc2fc34a66bc7a439'
+    to_user: "@all"
+    agent_id: '1000002'
+    api_secret: '9xLcN9E8WmWOr77rdpaZnZn66S6eLeUnE_Pe9MtHBGY'
+

@@ -1,0 +1,8 @@
+FROM grafana/grafana:5.0.4
+ADD grafana /
+ENV "GF_SECURITY_ADMIN_PASSWORD=zaojiao123" \
+    "PROMETHEUS_ENDPOINT=http://prometheus:9090" \
+    "ELASTICSEARCH_ENDPOINT=http://elasticsearch:9200" \
+    "ELASTICSEARCH_USER=readuser" \
+    "ELASTICSEARCH_PASSWORD=myelasticpass"
+ENTRYPOINT ["/init.sh"]
